@@ -10,8 +10,41 @@ public class RPN
 <span class="fc" id="L10">    }</span>
 
     public String enter(String token) {
-<span class="fc" id="L13">        stack.push(token);</span>
-<span class="fc" id="L14">        return stack.peek();</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (null == token) {</span>
+<span class="fc" id="L14">            throw new NullPointerException(&quot;Token cannot be null&quot;);</span>
+        }
+<span class="fc bfc" id="L16" title="All 8 branches covered.">        if (token.equals(&quot;+&quot;) || token.equals(&quot;*&quot;) || token.equals(&quot;-&quot;) || token.equals(&quot;/&quot;) ){</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">            if (stack.size() == 2) {</span>
+<span class="fc" id="L18">                double value1 = Double.parseDouble(stack.pop());</span>
+<span class="fc" id="L19">                double value2 = Double.parseDouble(stack.pop());</span>
+<span class="fc bfc" id="L20" title="All 4 branches covered.">                switch(token) {</span>
+                    case &quot;+&quot;:
+<span class="fc" id="L22">                        stack.push(String.valueOf(value1 + value2));</span>
+<span class="fc" id="L23">                        break;</span>
+                    case &quot;*&quot;:
+<span class="fc" id="L25">                        stack.push(String.valueOf(value1 * value2));</span>
+<span class="fc" id="L26">                        break;</span>
+                    case &quot;-&quot;:
+<span class="fc" id="L28">                        stack.push(String.valueOf(value1 - value2));</span>
+<span class="fc" id="L29">                        break;</span>
+                    default:
+<span class="fc" id="L31">                        stack.push(String.valueOf(value1 / value2));</span>
+                }
+<span class="fc" id="L33">            } else {</span>
+<span class="fc" id="L34">                throw new RuntimeException(&quot;Please enter another number&quot;);</span>
+            }
+        } else {
+            try {
+<span class="fc" id="L38">                Double.parseDouble(token);</span>
+<span class="fc" id="L39">            } catch (NumberFormatException okException) {</span>
+<span class="fc" id="L40">                throw new RuntimeException(&quot;Token entered is neither a number nor an operator&quot;);</span>
+<span class="nc" id="L41">            } catch (Exception badException) {</span>
+<span class="nc" id="L42">                throw new RuntimeException(&quot;We don't know what happened here&quot;);</span>
+<span class="fc" id="L43">            }</span>
+<span class="fc" id="L44">            stack.push(token);</span>
+        }
+<span class="fc" id="L46">        return stack.peek();</span>
     }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

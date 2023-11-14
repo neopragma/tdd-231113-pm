@@ -2,6 +2,10 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="org.example.tdd-fizzbuzz" target="11" />
+      <module name="org.example.tdd-fizzbuzz.integrationTest" target="11" />
+      <module name="org.example.tdd-fizzbuzz.main" target="11" />
+      <module name="org.example.tdd-fizzbuzz.test" target="11" />
       <module name="org.example.tdd-java-ps" target="11" />
       <module name="org.example.tdd-java-ps.integrationTest" target="11" />
       <module name="org.example.tdd-java-ps.main" target="11" />
@@ -9,6 +13,7 @@
       <module name="tdd-java" target="11" />
       <module name="tdd-java.main" target="11" />
       <module name="tdd-java.test" target="11" />
+      <module name="tdd-rpn" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

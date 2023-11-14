@@ -24,6 +24,15 @@
       </GradleProjectSettings>
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/tdd-rpn" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/tdd-rpn" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/tdd-samples" />
         <option name="gradleJvm" value="11" />
         <option name="modules">

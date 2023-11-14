@@ -11,7 +11,7 @@ public class CalcTest {
     @Test
     public void it_sums_two_values() {
         Calc calc = new Calc();
-        assertEquals(2.5, calc.sum(1.5,2.0));
+        assertEquals(3.5, calc.sum(1.5,2.0));
     }
     @Test
     public void it_sums_three_values() {

@@ -30,7 +30,7 @@ public class CalcParameterizedTest {
 
     private static Stream<Arguments> provideValuesForSum() {
         return Stream.of(
-                Arguments.of(new Double[] { 1.5, 2.0 }, 2.5),
+                Arguments.of(new Double[] { 1.5, 2.0 }, 3.5),
                 Arguments.of(new Double[] { 1.5, 2.0, 3.2 }, 6.7)
         );
     }
