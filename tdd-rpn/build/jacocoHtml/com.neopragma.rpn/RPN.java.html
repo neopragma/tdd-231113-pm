@@ -9,13 +9,9 @@ public class RPN
 <span class="fc" id="L9">        stack = new Stack&lt;String&gt;();</span>
 <span class="fc" id="L10">    }</span>
 
-    public String clear() {
-<span class="fc" id="L13">        stack.clear();</span>
-<span class="fc" id="L14">        return &quot;&quot;;</span>
-    }
-    public String push(String token) {
-<span class="nc" id="L17">        stack.push(token);</span>
-<span class="nc" id="L18">        return stack.peek();</span>
+    public String enter(String token) {
+<span class="fc" id="L13">        stack.push(token);</span>
+<span class="fc" id="L14">        return stack.peek();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

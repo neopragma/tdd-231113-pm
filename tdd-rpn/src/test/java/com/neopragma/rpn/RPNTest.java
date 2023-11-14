@@ -18,4 +18,12 @@ public class RPNTest
     public void entering_a_number_adds_the_number_to_the_stack() {
         assertEquals("3.75", rpn.enter("3.75"));
     }
+
+
+    @Test
+    public void entering_the_addition_operator_places_the_result_at_the_top_of_the_stack() {
+        rpn.enter("5.0");
+        rpn.enter("6.5");
+        assertEquals("11.5", rpn.enter("+"));
+    }
 }
