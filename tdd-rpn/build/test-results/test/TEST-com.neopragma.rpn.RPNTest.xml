@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.neopragma.rpn.RPNTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-14T13:23:18" hostname="Davids-MacBook-Pro.local" time="0.023">
+  <properties/>
+  <testcase name="clear_empties_the_stack()" classname="com.neopragma.rpn.RPNTest" time="0.023"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
