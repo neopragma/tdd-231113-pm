@@ -7,24 +7,21 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Bored {
+public class StillBored {
 
-    public String whatShouldIDo() throws IOException {
-        return whatShouldIDo(getBufferedReader());
-    }
-    public String whatShouldIDo(BufferedReader responseData)
+    public String whatShouldIDo()
             throws IOException, MalformedURLException {
+        BufferedReader in = getBufferedReader();
         String inputLine;
         StringBuffer response = new StringBuffer();
-
-        while ((inputLine = responseData.readLine()) != null) {
+        while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
         }
-        responseData.close();
+        in.close();
         return response.toString();
     }
 
-    private BufferedReader getBufferedReader() throws IOException {
+    BufferedReader getBufferedReader() throws IOException {
         URL url = new URL("https://www.boredapi.com/api/activity");
         HttpURLConnection con = (HttpURLConnection) url.openConnection();
         con.setRequestMethod("GET");
@@ -32,5 +29,4 @@ public class Bored {
         BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
         return in;
     }
-
 }

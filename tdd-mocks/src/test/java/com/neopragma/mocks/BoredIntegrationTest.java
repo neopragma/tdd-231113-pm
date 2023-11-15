@@ -10,6 +10,6 @@ public class BoredIntegrationTest {
     @Test
     public void play() throws Exception {
         Bored sut = new Bored();
-        assertEquals("Suggested activity", sut.whatShouldIDo());
+        assertTrue(sut.whatShouldIDo().startsWith("{\"activity\":"));
     }
 }

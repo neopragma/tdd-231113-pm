@@ -6,19 +6,19 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-<span class="nc" id="L9">public class LoadAndSortList {</span>
+<span class="fc" id="L9">public class LoadAndSortList {</span>
 
     public List&lt;String&gt; createListFrom(BufferedReader inputValues) throws IOException {
-<span class="nc bnc" id="L12" title="All 2 branches missed.">        if (null == inputValues) {</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        if (null == inputValues) {</span>
 <span class="nc" id="L13">            throw new IllegalArgumentException();</span>
         }
-<span class="nc" id="L15">        List&lt;String&gt; outputList = new ArrayList&lt;&gt;();</span>
-<span class="nc" id="L16">        String line = &quot;&quot;;</span>
-<span class="nc bnc" id="L17" title="All 2 branches missed.">        while ((line = inputValues.readLine()) != null) {</span>
-<span class="nc" id="L18">            outputList.add(line);</span>
+<span class="fc" id="L15">        List&lt;String&gt; outputList = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L16">        String line = &quot;&quot;;</span>
+<span class="fc bfc" id="L17" title="All 2 branches covered.">        while ((line = inputValues.readLine()) != null) {</span>
+<span class="fc" id="L18">            outputList.add(line);</span>
         }
-<span class="nc" id="L20">        Collections.sort(outputList);</span>
-<span class="nc" id="L21">        return outputList;</span>
+<span class="fc" id="L20">        Collections.sort(outputList);</span>
+<span class="fc" id="L21">        return outputList;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

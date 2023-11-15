@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.neopragma.mock.CatFactsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-11-15T16:14:22" hostname="Davids-MacBook-Pro.local" time="0.894">
-  <properties/>
-  <testcase name="play()" classname="com.neopragma.mock.CatFactsTest" time="0.894"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

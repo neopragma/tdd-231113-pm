@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.neopragma.mocks.BoredIntegrationTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-15T16:59:58" hostname="Davids-MacBook-Pro.local" time="0.462">
+<testsuite name="com.neopragma.samples.LoadAndSortListTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-11-15T19:55:03" hostname="Davids-MacBook-Pro.local" time="0.898">
   <properties/>
-  <testcase name="play()" classname="com.neopragma.mocks.BoredIntegrationTest" time="0.462">
-    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;Suggested activity&gt; but was: &lt;{&quot;activity&quot;:&quot;Write a handwritten letter to somebody&quot;,&quot;type&quot;:&quot;social&quot;,&quot;participants&quot;:1,&quot;price&quot;:0.1,&quot;link&quot;:&quot;&quot;,&quot;key&quot;:&quot;2277801&quot;,&quot;accessibility&quot;:0.8}&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;Suggested activity&gt; but was: &lt;{&quot;activity&quot;:&quot;Write a handwritten letter to somebody&quot;,&quot;type&quot;:&quot;social&quot;,&quot;participants&quot;:1,&quot;price&quot;:0.1,&quot;link&quot;:&quot;&quot;,&quot;key&quot;:&quot;2277801&quot;,&quot;accessibility&quot;:0.8}&gt;
+  <testcase name="itReturnsTheInputValuesAsASortedList()" classname="com.neopragma.samples.LoadAndSortListTest" time="0.898">
+    <failure message="org.opentest4j.AssertionFailedError: expected: &lt;[Atlanta, Baltimore, Chixago, Poughkeepsie]&gt; but was: &lt;[Atlanta, Baltimore, Chicago, Poughkeepsie]&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;[Atlanta, Baltimore, Chixago, Poughkeepsie]&gt; but was: &lt;[Atlanta, Baltimore, Chicago, Poughkeepsie]&gt;
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at app//org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at app//org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
 	at app//org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
 	at app//org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1141)
-	at app//com.neopragma.mocks.BoredIntegrationTest.play(BoredIntegrationTest.java:13)
+	at app//com.neopragma.samples.LoadAndSortListTest.itReturnsTheInputValuesAsASortedList(LoadAndSortListTest.java:32)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@11.0.17/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base@11.0.17/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
