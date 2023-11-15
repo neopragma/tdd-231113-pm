@@ -18,64 +18,64 @@ public class BrainF {
 <span class="nc" id="L18">        addCommands(code);</span>
 <span class="nc" id="L19">    }</span>
 
-<span class="fc" id="L21">    public BrainF(int memorySize, Stream&lt;Byte&gt; in) {</span>
-<span class="fc" id="L22">        memory = new byte[memorySize];</span>
-<span class="fc" id="L23">        input = in.iterator();</span>
-<span class="fc" id="L24">    }</span>
+<span class="nc" id="L21">    public BrainF(int memorySize, Stream&lt;Byte&gt; in) {</span>
+<span class="nc" id="L22">        memory = new byte[memorySize];</span>
+<span class="nc" id="L23">        input = in.iterator();</span>
+<span class="nc" id="L24">    }</span>
 
-<span class="fc" id="L26">    private final List&lt;BrainFCommand&gt; commands = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L26">    private final List&lt;BrainFCommand&gt; commands = new ArrayList&lt;&gt;();</span>
     private final Iterator&lt;Byte&gt; input;
     private int commandIndex;
     private final byte[] memory;
-<span class="fc" id="L30">    private final StringBuilder output = new StringBuilder();</span>
+<span class="nc" id="L30">    private final StringBuilder output = new StringBuilder();</span>
 
     private int memoryIndex;
 
     public void addCommands(String string) {
-<span class="pc bpc" id="L35" title="1 of 2 branches missed.">        string.chars().mapToObj(i -&gt; BrainFCommand.getCommand((char) i)).filter(obj -&gt; obj != null).forEachOrdered(commands::add);</span>
-<span class="fc" id="L36">    }</span>
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        string.chars().mapToObj(i -&gt; BrainFCommand.getCommand((char) i)).filter(obj -&gt; obj != null).forEachOrdered(commands::add);</span>
+<span class="nc" id="L36">    }</span>
 
     private void changeMemory(int i) {
-<span class="fc" id="L39">        checkMemoryIndex();</span>
-<span class="fc" id="L40">        memory[memoryIndex] += i;</span>
-<span class="fc" id="L41">    }</span>
+<span class="nc" id="L39">        checkMemoryIndex();</span>
+<span class="nc" id="L40">        memory[memoryIndex] += i;</span>
+<span class="nc" id="L41">    }</span>
 
     private void findMatching(BrainFCommand decrease, BrainFCommand increase, int direction) {
-<span class="fc" id="L44">        int matching = 1;</span>
+<span class="nc" id="L44">        int matching = 1;</span>
         while (true) {
-<span class="fc" id="L46">            commandIndex += direction;</span>
-<span class="fc" id="L47">            BrainFCommand current = commands.get(commandIndex);</span>
+<span class="nc" id="L46">            commandIndex += direction;</span>
+<span class="nc" id="L47">            BrainFCommand current = commands.get(commandIndex);</span>
 
-<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (current == decrease) {</span>
-<span class="fc" id="L50">                matching--;</span>
-<span class="fc bfc" id="L51" title="All 2 branches covered.">                if (matching == 0) {</span>
-<span class="fc" id="L52">                    break;</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">            if (current == decrease) {</span>
+<span class="nc" id="L50">                matching--;</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">                if (matching == 0) {</span>
+<span class="nc" id="L52">                    break;</span>
                 }
             }
-<span class="fc bfc" id="L55" title="All 2 branches covered.">            else if (current == increase) {</span>
-<span class="fc" id="L56">                matching++;</span>
+<span class="nc bnc" id="L55" title="All 2 branches missed.">            else if (current == increase) {</span>
+<span class="nc" id="L56">                matching++;</span>
             }
-<span class="fc" id="L58">        }</span>
-<span class="fc" id="L59">    }</span>
+<span class="nc" id="L58">        }</span>
+<span class="nc" id="L59">    }</span>
 
     public byte getMemory() {
-<span class="fc" id="L62">        return memory[memoryIndex];</span>
+<span class="nc" id="L62">        return memory[memoryIndex];</span>
     }
 
     public void runToEnd() {
-<span class="fc bfc" id="L66" title="All 2 branches covered.">        while (commandIndex &lt; commands.size()) {</span>
-<span class="fc" id="L67">            step();</span>
+<span class="nc bnc" id="L66" title="All 2 branches missed.">        while (commandIndex &lt; commands.size()) {</span>
+<span class="nc" id="L67">            step();</span>
         }
-<span class="fc" id="L69">    }</span>
+<span class="nc" id="L69">    }</span>
 
     public BrainFCommand step() {
-<span class="pc bpc" id="L72" title="1 of 2 branches missed.">        if (commandIndex &gt;= commands.size()) {</span>
+<span class="nc bnc" id="L72" title="All 2 branches missed.">        if (commandIndex &gt;= commands.size()) {</span>
 <span class="nc" id="L73">            return null;</span>
         }
-<span class="fc" id="L75">        BrainFCommand command = commands.get(commandIndex);</span>
-<span class="fc" id="L76">        perform(command);</span>
-<span class="fc" id="L77">        commandIndex++;</span>
-<span class="fc" id="L78">        return command;</span>
+<span class="nc" id="L75">        BrainFCommand command = commands.get(commandIndex);</span>
+<span class="nc" id="L76">        perform(command);</span>
+<span class="nc" id="L77">        commandIndex++;</span>
+<span class="nc" id="L78">        return command;</span>
     }
 
     public void setMemory(byte value) {
@@ -83,7 +83,7 @@ public class BrainF {
 <span class="nc" id="L83">    }</span>
 
     public String getOutput() {
-<span class="fc" id="L86">        return output.toString();</span>
+<span class="nc" id="L86">        return output.toString();</span>
     }
 
     public int getMemoryIndex() {
@@ -95,53 +95,53 @@ public class BrainF {
     }
 
     public void perform(BrainFCommand command) {
-<span class="pc bpc" id="L98" title="1 of 9 branches missed.">        switch (command) {</span>
+<span class="nc bnc" id="L98" title="All 9 branches missed.">        switch (command) {</span>
             case ADD:
-<span class="fc" id="L100">                changeMemory(1);</span>
-<span class="fc" id="L101">                break;</span>
+<span class="nc" id="L100">                changeMemory(1);</span>
+<span class="nc" id="L101">                break;</span>
             case END_WHILE:
-<span class="fc bfc" id="L103" title="All 2 branches covered.">                if (getMemory() != 0) {</span>
-<span class="fc" id="L104">                    findMatching(BrainFCommand.WHILE, BrainFCommand.END_WHILE, -1);</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">                if (getMemory() != 0) {</span>
+<span class="nc" id="L104">                    findMatching(BrainFCommand.WHILE, BrainFCommand.END_WHILE, -1);</span>
                 }
                 break;
             case NEXT:
-<span class="fc" id="L108">                memoryIndex++;</span>
-<span class="fc" id="L109">                checkMemoryIndex();</span>
-<span class="fc" id="L110">                break;</span>
+<span class="nc" id="L108">                memoryIndex++;</span>
+<span class="nc" id="L109">                checkMemoryIndex();</span>
+<span class="nc" id="L110">                break;</span>
             case PREVIOUS:
-<span class="fc" id="L112">                memoryIndex--;</span>
-<span class="fc" id="L113">                checkMemoryIndex();</span>
-<span class="fc" id="L114">                break;</span>
+<span class="nc" id="L112">                memoryIndex--;</span>
+<span class="nc" id="L113">                checkMemoryIndex();</span>
+<span class="nc" id="L114">                break;</span>
             case READ:
 <span class="nc" id="L116">                byte value = input.next();</span>
 <span class="nc" id="L117">                setMemory(value);</span>
 <span class="nc" id="L118">                break;</span>
             case SUBSTRACT:
-<span class="fc" id="L120">                changeMemory(-1);</span>
-<span class="fc" id="L121">                break;</span>
+<span class="nc" id="L120">                changeMemory(-1);</span>
+<span class="nc" id="L121">                break;</span>
             case WHILE:
-<span class="fc bfc" id="L123" title="All 2 branches covered.">                if (getMemory() == 0) {</span>
-<span class="fc" id="L124">                    findMatching(BrainFCommand.END_WHILE, BrainFCommand.WHILE, 1);</span>
+<span class="nc bnc" id="L123" title="All 2 branches missed.">                if (getMemory() == 0) {</span>
+<span class="nc" id="L124">                    findMatching(BrainFCommand.END_WHILE, BrainFCommand.WHILE, 1);</span>
                 }
                 break;
             case WRITE:
-<span class="fc" id="L128">                char write = (char) getMemory();</span>
-<span class="fc" id="L129">                output.append(write);</span>
-<span class="fc" id="L130">                break;</span>
+<span class="nc" id="L128">                char write = (char) getMemory();</span>
+<span class="nc" id="L129">                output.append(write);</span>
+<span class="nc" id="L130">                break;</span>
             case NONE:
             default:
                 break;
         }
-<span class="fc" id="L135">    }</span>
+<span class="nc" id="L135">    }</span>
 
     private void checkMemoryIndex() {
-<span class="pc bpc" id="L138" title="1 of 2 branches missed.">        if (memoryIndex &lt; 0) {</span>
+<span class="nc bnc" id="L138" title="All 2 branches missed.">        if (memoryIndex &lt; 0) {</span>
 <span class="nc" id="L139">            memoryIndex += memory.length;</span>
         }
-<span class="pc bpc" id="L141" title="1 of 2 branches missed.">        if (memoryIndex &gt;= memory.length) {</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        if (memoryIndex &gt;= memory.length) {</span>
 <span class="nc" id="L142">            memoryIndex -= memory.length;</span>
         }
-<span class="fc" id="L144">    }</span>
+<span class="nc" id="L144">    }</span>
 
     public byte[] getMemoryArray(int fromIndex, int length) {
 <span class="nc" id="L147">        return Arrays.copyOfRange(memory, fromIndex, fromIndex + length);</span>
@@ -184,11 +184,11 @@ public class BrainF {
     }
 
     public static BrainF createWithDefaultSize() {
-<span class="fc" id="L187">        return createUsingSystemInputWithMemorySize(DEFAULT_MEMORY_SIZE);</span>
+<span class="nc" id="L187">        return createUsingSystemInputWithMemorySize(DEFAULT_MEMORY_SIZE);</span>
     }
 
     public static BrainF createUsingSystemInputWithMemorySize(int memorySize) {
-<span class="fc" id="L191">        Stream&lt;Byte&gt; in = Stream.generate(() -&gt; {</span>
+<span class="nc" id="L191">        Stream&lt;Byte&gt; in = Stream.generate(() -&gt; {</span>
             try {
 <span class="nc" id="L193">                return (byte) System.in.read();</span>
             }
@@ -196,7 +196,7 @@ public class BrainF {
 <span class="nc" id="L196">                throw new RuntimeException(e);</span>
             }
         });
-<span class="fc" id="L199">        return new BrainF(memorySize, in);</span>
+<span class="nc" id="L199">        return new BrainF(memorySize, in);</span>
     }
 
 }

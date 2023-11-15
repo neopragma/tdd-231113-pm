@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CatFacts.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">tdd-rpn</a> &gt; <a href="index.source.html" class="el_package">com.neopragma.mocks</a> &gt; <span class="el_source">CatFacts.java</span></div><h1>CatFacts.java</h1><pre class="source lang-java linenums">package com.neopragma.mocks;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+
+<span class="fc" id="L10">public class CatFacts {</span>
+
+    public String justTheFactsMaam()
+            throws IOException, MalformedURLException {
+<span class="fc" id="L14">        URL url = new URL(&quot;https://catfact.ninja/fact&quot;);</span>
+<span class="fc" id="L15">        HttpURLConnection con = (HttpURLConnection) url.openConnection();</span>
+<span class="fc" id="L16">        con.setRequestMethod(&quot;GET&quot;);</span>
+<span class="fc" id="L17">        int responseCode = con.getResponseCode();</span>
+<span class="fc" id="L18">        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));</span>
+        String inputLine;
+<span class="fc" id="L20">        StringBuffer response = new StringBuffer();</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">        while ((inputLine = in.readLine()) != null) {</span>
+<span class="fc" id="L22">            response.append(inputLine);</span>
+        }
+<span class="fc" id="L24">        in.close();</span>
+<span class="fc" id="L25">        return response.toString();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

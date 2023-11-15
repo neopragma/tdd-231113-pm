@@ -2,17 +2,17 @@
 
 import java.util.stream.IntStream;
 
-<span class="fc" id="L5">public class LiterateFizzBuzz implements FizzPlay {</span>
+<span class="nc" id="L5">public class LiterateFizzBuzz implements FizzPlay {</span>
 
     public String[] fizzbuzz() {
-<span class="fc" id="L8">        /* Transform a list of integers */    return IntStream.range(1,101).mapToObj(</span>
+<span class="nc" id="L8">        /* Transform a list of integers */    return IntStream.range(1,101).mapToObj(</span>
         /* into a list of strings such that any integer evenly divisible
-<span class="fc bfc" id="L10" title="All 2 branches covered.">           by both 3 and 5 becomes &quot;FizzBuzz&quot;, */  i -&gt; i % 15 == 0 ? &quot;FizzBuzz&quot;</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">           by both 3 and 5 becomes &quot;FizzBuzz&quot;, */  i -&gt; i % 15 == 0 ? &quot;FizzBuzz&quot;</span>
         /* any other integer evenly divisible
-<span class="fc bfc" id="L12" title="All 2 branches covered.">           by 5 becomes &quot;Buzz&quot;, */                 : i % 5 == 0 ? &quot;Buzz&quot;</span>
+<span class="nc bnc" id="L12" title="All 2 branches missed.">           by 5 becomes &quot;Buzz&quot;, */                 : i % 5 == 0 ? &quot;Buzz&quot;</span>
         /* any other integer evenly divisible
-<span class="fc bfc" id="L14" title="All 2 branches covered.">           by 3 becomes &quot;Fizz&quot; */                 : i % 3 == 0 ? &quot;Fizz&quot;</span>
-<span class="fc" id="L15">        /* and other values are unchanged. */     : String.valueOf(i)).toArray(String[]::new);</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">           by 3 becomes &quot;Fizz&quot; */                 : i % 3 == 0 ? &quot;Fizz&quot;</span>
+<span class="nc" id="L15">        /* and other values are unchanged. */     : String.valueOf(i)).toArray(String[]::new);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

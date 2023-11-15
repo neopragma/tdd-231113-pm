@@ -3,25 +3,25 @@
 import java.util.HashMap;
 import java.util.Map;
 
-<span class="fc" id="L6">public enum BrainFCommand {</span>
+<span class="nc" id="L6">public enum BrainFCommand {</span>
 
-<span class="fc" id="L8">    NONE((char) 0), NEXT('&gt;'), PREVIOUS('&lt;'), WRITE('.'), READ(','), ADD('+'), SUBSTRACT('-'), WHILE('['), END_WHILE(']');</span>
+<span class="nc" id="L8">    NONE((char) 0), NEXT('&gt;'), PREVIOUS('&lt;'), WRITE('.'), READ(','), ADD('+'), SUBSTRACT('-'), WHILE('['), END_WHILE(']');</span>
 
     private final char ch;
-<span class="fc" id="L11">    private static final Map&lt;Character, BrainFCommand&gt; commands = new HashMap&lt;&gt;();</span>
+<span class="nc" id="L11">    private static final Map&lt;Character, BrainFCommand&gt; commands = new HashMap&lt;&gt;();</span>
 
     static {
-<span class="fc bfc" id="L14" title="All 2 branches covered.">        for (BrainFCommand comm : BrainFCommand.values()) {</span>
-<span class="fc" id="L15">            commands.put(comm.ch, comm);</span>
+<span class="nc bnc" id="L14" title="All 2 branches missed.">        for (BrainFCommand comm : BrainFCommand.values()) {</span>
+<span class="nc" id="L15">            commands.put(comm.ch, comm);</span>
         }
-<span class="fc" id="L17">    }</span>
+<span class="nc" id="L17">    }</span>
 
-<span class="fc" id="L19">    private BrainFCommand(char ch) {</span>
-<span class="fc" id="L20">        this.ch = ch;</span>
-<span class="fc" id="L21">    }</span>
+<span class="nc" id="L19">    private BrainFCommand(char ch) {</span>
+<span class="nc" id="L20">        this.ch = ch;</span>
+<span class="nc" id="L21">    }</span>
 
     public static BrainFCommand getCommand(char ch) {
-<span class="fc" id="L24">        return commands.getOrDefault(ch, NONE);</span>
+<span class="nc" id="L24">        return commands.getOrDefault(ch, NONE);</span>
     }
 
 }

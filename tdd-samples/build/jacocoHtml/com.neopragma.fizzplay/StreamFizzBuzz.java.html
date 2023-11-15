@@ -2,15 +2,15 @@
 
 import java.util.stream.IntStream;
 
-<span class="fc" id="L5">public class StreamFizzBuzz implements FizzPlay {</span>
+<span class="nc" id="L5">public class StreamFizzBuzz implements FizzPlay {</span>
 
     public String[] fizzbuzz() {
-<span class="fc" id="L8">        return IntStream.range(1, 101)</span>
-<span class="fc bfc" id="L9" title="All 2 branches covered.">                .mapToObj(i -&gt; i % 15 == 0 ? &quot;FizzBuzz&quot;</span>
-<span class="fc bfc" id="L10" title="All 2 branches covered.">                    : i % 5 == 0 ? &quot;Buzz&quot;</span>
-<span class="fc bfc" id="L11" title="All 2 branches covered.">                    : i % 3 == 0 ? &quot;Fizz&quot;</span>
-<span class="fc" id="L12">                    : String.valueOf(i))</span>
-<span class="fc" id="L13">                .toArray(String[]::new);</span>
+<span class="nc" id="L8">        return IntStream.range(1, 101)</span>
+<span class="nc bnc" id="L9" title="All 2 branches missed.">                .mapToObj(i -&gt; i % 15 == 0 ? &quot;FizzBuzz&quot;</span>
+<span class="nc bnc" id="L10" title="All 2 branches missed.">                    : i % 5 == 0 ? &quot;Buzz&quot;</span>
+<span class="nc bnc" id="L11" title="All 2 branches missed.">                    : i % 3 == 0 ? &quot;Fizz&quot;</span>
+<span class="nc" id="L12">                    : String.valueOf(i))</span>
+<span class="nc" id="L13">                .toArray(String[]::new);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
