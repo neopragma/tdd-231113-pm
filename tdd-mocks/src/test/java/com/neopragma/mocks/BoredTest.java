@@ -26,9 +26,4 @@ public class BoredTest {
         verify(responseData, times(2)).readLine();
     }
 
-    @Test
-    public void it_reads_the_response_data_using_the_default_method() throws IOException {
-
-    }
-
 }
