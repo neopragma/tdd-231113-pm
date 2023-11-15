@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.GildedRoseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-22T17:15:37" hostname="Davids-MacBook-Pro.local" time="0.008">
+<testsuite name="com.gildedrose.GildedRoseTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2023-11-15T19:16:10" hostname="Davids-MacBook-Pro.local" time="0.05">
   <properties/>
-  <testcase name="foo()" classname="com.gildedrose.GildedRoseTest" time="0.008"/>
+  <testcase name="Sulfuras_maintains_quality_of_80()" classname="com.gildedrose.GildedRoseTest" time="0.016"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[1]" classname="com.gildedrose.GildedRoseTest" time="0.011"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[2]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[3]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[4]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[5]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[6]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[7]" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[8]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[9]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[10]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[11]" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[12]" classname="com.gildedrose.GildedRoseTest" time="0.001"/>
+  <testcase name="quality_decreases_by_1_for_normal_items(Item[], int)[13]" classname="com.gildedrose.GildedRoseTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
